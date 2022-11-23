@@ -1,0 +1,20 @@
+<%- include('includes/head')  %>
+<%- include('includes/navbarFilter')  %>
+  <div class="container">
+    <% if ( noticias.length == 0 ) { %>
+      <div style="height: 100vh ;" class="d-flex flex-column align-items-center justify-content-center">
+        <h2 style="margin-top: 60px ;" >Nenhum dado encontrado sobre : "<%= search %>" </h1>
+        <h2>Ou noticias da data : "<%= date %>" </h1>
+      </div>
+      <% } else { %>
+    <table style="margin-top: 60px ;" class="table">
+      <%  noticias.forEach(noticia => {  %>
+        <tr>
+          <td><a class="fw-bolder link-dark text-decoration-none" target="_blank" href="<%= noticia.urlNoticia %>"><%= noticia.noticia %></a></td>
+          <td><a class="link-dark" href="/noticias/?search=&date=<%= moment(noticia.dateNoticia).format('YYYY-MM-DD') %>"><%= moment(noticia.dateNoticia).format('DD/MM/YYYY') %></a></td>
+        </tr>
+        <% });  %>
+      </table>
+      <% } %>
+  </div>
+<%- include('includes/footer')  %>

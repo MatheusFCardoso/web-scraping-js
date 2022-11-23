@@ -1,0 +1,17 @@
+<%  if (errors.length > 0) { %>
+  <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      <% errors.forEach( erro => { %>
+          <%= erro %><br>
+      <% }); %>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  <%  } %>
+
+  <%  if (succes.length > 0) { %>
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <% succes.forEach( succes => { %>
+          <%= succes %><br>
+      <% }); %>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  <%  } %>

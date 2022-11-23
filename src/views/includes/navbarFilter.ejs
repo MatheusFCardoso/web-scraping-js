@@ -1,0 +1,16 @@
+<nav class="navbar navbar-expand-lg bg-light fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand link-dark fw-bold" href="/">WebScraping.js</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <a class="ms-auto me-2 link-danger text-decoration-none fw-bold" href="/noticias">Limpar Filtro</a>
+      <form class="d-flex" method="get" action="/noticias/">
+        <input name="search" style="border: 2px solid black;" class="form-control me-2" type="text" placeholder="Pesquisar...." aria-label="Search">
+        <input name="date" type="date" class="me-2" style="height: 40px ; width: 50px; border-radius: 8px; padding: 8px; border: 2px solid black;" value="YYYY-MM-DD">
+        <button class="btn btn-outline-success rounded-circle" type="submit"><i class="fa-sharp fa-solid fa-filter"></i></button>
+      </form>
+    </div>
+  </div>
+</nav>

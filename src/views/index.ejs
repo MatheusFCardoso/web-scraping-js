@@ -1,0 +1,16 @@
+<%- include('includes/head')  %>
+<%- include('includes/navbar')  %>
+<div class="container" style="height: 100vh ;">
+  <div style="height: 100vh ;" class="d-flex flex-column align-items-center justify-content-center">
+    <h1 class="display-6 text-center">Quer acessar o banco de dados de noticias ? <br> <a class="text-decoration-none" href="/noticias">clique aqui para acessar.</a></h1>
+    <%- include('includes/messages')  %>
+    <form  action="/puppeteer" method="post">
+      <h2 class="text-center">Informe uma data para fazermos Web Scraping.</h2>
+      <div class="mt-3 d-flex align-items-center justify-content-center ">
+        <input style="height: 40px ; border-radius: 8px; padding: 10px; border: 2px solid black;" name="date" type="date" value="YYYY-MM-DD">
+        <button class="ms-1 btn btn-primary" type="submit" >enviar</button>
+      </div>
+    </form>
+  </div>
+</div>
+<%- include('includes/footer')  %>
